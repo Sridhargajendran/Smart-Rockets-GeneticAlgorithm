@@ -149,8 +149,8 @@ function Rocket(dna) {
     var d = dist(this.pos.x, this.pos.y, target.x, target.y);
     //this.fitness = map(d, 0, width, width, 0);
     //Better fitness function than the above
-    this.fitness = 1 / pow(d, 8);
-    //this.fitness = 1 / (pow(d, 8) - 1);
+    //this.fitness = 1 / pow(d, 8);
+    this.fitness = 1 / (pow(d, 8) - 1);
 
     if (this.completed) {
       this.fitness *= 10;
