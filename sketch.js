@@ -67,7 +67,8 @@ function Population() {
       var n = this.rockets[i].fitness * 100;
 
       for (var j = 0; j < n; j++) {
-        this.matingpool.push(this.rockets[i]);
+        //this.matingpool.push(this.rockets[i]);
+        this.matingpool[j] = this.rockets[i];
       }
     }
   };
