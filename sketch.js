@@ -1,7 +1,7 @@
 var population;
 var lifespan = 400;
 var count = 0;
-var lifep;
+var generation = 0;
 var target;
 var maxforce = 0.2;
 var rx = 200;
@@ -14,7 +14,6 @@ function setup() {
 
   target = createVector(width / 2, 40);
   population = new Population();
-  lifep = createP();
 }
 
 function draw() {
@@ -30,13 +29,18 @@ function draw() {
 
     population.evaluate();
     population.selection();
+    generation++;
   }
 
   fill(255);
   ellipse(target.x, target.y, 16, 16);
   rect(rx, ry, rw, rh);
 
-  lifep.html(count);
+  translate(430, 50);
+  textSize(20);
+  fill(255);
+  noStroke();
+  text("Generation : " + generation, 0, 0);
 }
 
 function Population() {
