@@ -1,7 +1,7 @@
 var population;
 var lifespan = 400;
 var count = 0;
-var generation = 0;
+var generation = 1;
 var target;
 var maxforce = 0.2;
 var rx = 200;
